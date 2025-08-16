@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name ="description" content="A well-structured HTML5 form example with lists, tables, media, and accessibility features.">
+    <meta name=" " content="">
+    <title>Enhanced HTML5 Form Example</title>
+    <meta name="description" content="A well-structured HTML5 form example with lists, tables, media, and accessibility features.">
+</head>
+<body>
+    <header>
+        <h1>Week 2 Assignment</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#">Form</a></li>
+                <li><a href="#">Information</a></li>
+                <li><a href="#">Media</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="info-section" aria-labelledby="info-heading">
+            <h2 id="info-heading">Why Use Enhanced Forms</h2>
+            <ul>
+                <li>Improved user experience</li>
+                <li>Better accessibility</li>
+                <li>Stronger data validation</li>
+            </ul>
+            <table border="1" aria-label="Form Field Types">
+                <caption>Common HTML5 Input Types</caption>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text</td>
+                        <td>Single-line text input</td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td>Email address input with validation</td>
+                    </tr>
+                    <tr>
+                        <td>date</td>
+                        <td>Date picker</td>
+                    </tr>
+                    <tr>
+                        <td>number</td>
+                        <td>Numeric input</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="media-section" aria-labelledby="media-heading">
+            <h2 id="media-heading">Sample Media</h2>
+            <figure>
+                <img src="https://scontent.fmba5-1.fna.fbcdn.net/v/t39.30808-6/506732014_650337231384095_1022380472460717865_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEpqEvSVodZGJxeO81ZeLQD0ZvUJywllKTRm9QnLCWUpJgj2PtQillZw3AZKP88N8sXPOW7tjQi9i8rYtHzTvSN&_nc_ohc=VS8ycuaXsnQQ7kNvwH3yg_c&_nc_oc=AdkbHD0-kqkEyOxMVE41I0b7WAOEra0pX3H9NM_StAjj8SoDiK_NkGbfGUptR_XFMvw&_nc_zt=23&se=-1&_nc_ht=scontent.fmba5-1.fna&_nc_gid=3-W2b1Km3G1otZci4Vcvtw&oh=00_AfXtj7jfIySB7ZOZWBlENzl5KMlaNUeSXl1LkxhS7_l0jQ&oe=68A69242" alt="Sample placeholder image" width="300" height="150">
+                <figcaption>Example of an accessible image with alt text.</figcaption>
+            </figure>
+            <audio controls>
+                <source src="C:\Users\X280\Downloads\WhatsApp Ptt 2025-08-15 at 18.59.06.ogg" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section id="form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading">Registration Form</h2>
+            <form action="#" method="post" autocomplete="on" aria-describedby="form-desc">
+                <p id="form-desc">Fields marked with <span aria-label="required"></span></p>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name <span aria-label="required"></span></label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autocomplete="name"><br><br>
+
+                    <label for="email">Email <span aria-label="required"></span></label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required autocomplete="email"><br><br>
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" autocomplete="bday"><br><br>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="26656539062" pattern="[0-9\-]+" autocomplete="tel"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <label for="username">Username <span aria-label="required"></span></label>
+                    <input type="text" id="username" name="username" placeholder="Choose a username" required autocomplete="username"><br><br>
+
+                    <label for="password">Password <span aria-label="required"></span></label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8" autocomplete="new-password"><br><br>
+
+                    <label for="confirm-password">Confirm Password <span aria-label="required"></span></label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required minlength="8" autocomplete="new-password"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="de">Lesotho</option>
+                        <option value="us">Kenya</option>
+                        <option value="uk">South Africa</option>
+                        <option value="other">Other</option>
+                    </select><br><br>
+
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </fieldset>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Makhala Lehloenya. All rights reserved.</p>
+    </footer>
+</body>
+</html>
